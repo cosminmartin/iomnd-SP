@@ -1,6 +1,6 @@
 ﻿CREATE TABLE Offers (
 	ID UNIQUEIDENTIFIER PRIMARY KEY DEFAULT NEWSEQUENTIALID() NOT NULL,
-	CheckInDate datetime DEFAULT GETDATE(),
+	CheckInDate datetime DEFAULT GETDATE() NOT NULL,
 	StayDurationNights int,
 	PersonCombination VARCHAR(256),
 	Service_Code VARCHAR(256),
@@ -11,6 +11,6 @@
 	StrikePricePerAdult DECIMAL(10,2),
 	StrikePricePerChild DECIMAL(10,2),
 	ShowStrikePrice bit,
-	LastUpdated datetime DEFAULT GETDATE()
+	LastUpdated datetime DEFAULT GETDATE() NOT NULL
 )
 GO

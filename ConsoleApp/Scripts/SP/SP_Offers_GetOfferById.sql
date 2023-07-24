@@ -1,0 +1,8 @@
+CREATE PROCEDURE SP_Offers_GetOfferById
+	(@id UNIQUEIDENTIFIER)
+
+AS
+BEGIN
+	SELECT * FROM Offers 
+	WHERE ID = @id
+END
